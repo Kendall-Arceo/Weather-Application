@@ -22,32 +22,43 @@
             <div class = "card-body">
                 <div class ="row">
 
-                    <div class = "col-lg-2">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                        </form>
+                    <div class="col-lg-2">
+                    
+
+                        <!--Searching other cities by the user-->
+                        <div class="form-group">
+                        
+                            <label for="exampleInputEmail1">Search for a city: </label>
+                        
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <button data-weather class="search" style="margin-right:5px">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        
+                        </div>
+
+                        <!--Empty div with a class to dump other listing of cities-->
+                        <div class = "cityList"></div>
+                    
                     </div>
 
+                    <!--First is the initial city, user's location is pulled and it is displayed-->
                     <div class = "col-lg-10">
                         <div>
                             <div class="card text-center">
                                 <div class="card-header">
-                                  Featured
+                                  Locale Weather
                                 </div>
-                                <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                                <div class="card-footer text-muted">
-                                  2 days ago
-                                </div>
+                                <div class="city"></div>
+                                <div class="wind"></div>
+                                <div class="humidity"></div>
+                                <div class="temp"></div>
                             </div>
 
+                            <br><br>
+
+
+                            <!--Five day forecast along with the user's pulled location and will change if user decides to choose another city-->
                             <div class = "row">
                                 <div class = "col-lg-12">
                                     <div class ="card-header">
