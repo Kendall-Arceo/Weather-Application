@@ -26,60 +26,46 @@
                     
 
                         <!--Searching other cities by the user-->
-                        <div class="form-group" id = "searchInputForm">
-                        
-                            <label for="search">Search for a city: </label>
-                        
-                            <input type="text" class="form-control" id="search"  placeholder="Enter a city of your choice!">
-                            <button data-weather class="citySearch" style="margin-right:5px">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        
-                        </div>
-
+                        <form>
+                            <div class="form-group" id = "searchInputForm">
+                            
+                                <label for="search">Search for a city: </label>
+                            
+                                <input type="text" class="form-control" id="search"  placeholder="Enter a city of your choice!">
+                                <button data-weather class="citySearch" style="margin-right:5px">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            
+                            </div>
+                        </form>        
                         <!--Empty div with a class to dump other listing of cities-->
                         <ul id = "cityList"></ul>
                     
                     </div>
 
-                    <!--First is the initial city, user's location is pulled and it is displayed-->
+                    <!--searched city is pulled from API and contents of specific weather data is input here-->
                     <div class = "col-lg-10">
                         <div>
+
                             <div class="card text-center">
                                 <div class="card-header">
-                                  Locale Weather
+                                  Searched City
                                 </div>
-
-                                <div class="city"></div>
-                                <div class="wind"></div>
-                                <div class="humidity"></div>
-                                <div class="temp"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title" id="currentCity">...</h5>
+                                    <p class="card-text" id="currentTempature">...</p>
+                                    <p class="card-text" id="currentHumidity">...</p>
+                                    <p class="card-text" id="currentWindSpeed">...</p>
+                                    <p class="card-text" id="currentUVIndex">...</p>
+                                </div>
                                 
                             </div>
-
-                            <br><br>
-
+                        
 
                             <!--Five day forecast along with the user's pulled location and will change if user decides to choose another city-->
                             <div class = "row">
-                                <div class = "col-lg-12">
-
-                                    <div class="card text-center">
-                                        <div class="card-header">
-                                          Searched City
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="currentCity">...</h5>
-                                            <p class="card-text" id="currentTempature">...</p>
-                                            <p class="card-text" id="currentHumidity">...</p>
-                                            <p class="card-text" id="currentWindSpeed">...</p>
-                                            <p class="card-text" id="currentUVIndex">...</p>
-                                          </div>
-                                    </div>
-
-                                </div>
-
-                                <br><br>
+                                
+                                
 
                                 <div class = "col-lg-12">
                                     <div class ="card-header">
@@ -93,7 +79,7 @@
                                             <div class ="card-header">
                                                 Date
                                             </div>
-                                            <img src="..." class="card-img-top" alt="...">
+                                            <img class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Temp: </h5>
                                                 <p class="card-text">Humidity: </p>
@@ -105,7 +91,7 @@
                                             <div class ="card-header">
                                                 Date
                                             </div>
-                                            <img src="..." class="card-img-top" alt="...">
+                                            <img class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Temp: </h5>
                                                 <p class="card-text">Humidity: </p>
@@ -116,7 +102,7 @@
                                             <div class ="card-header">
                                                 Date
                                             </div>
-                                            <img src="..." class="card-img-top" alt="...">
+                                            <img class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Temp: </h5>
                                                 <p class="card-text">Humidity: </p>
@@ -127,7 +113,7 @@
                                             <div class ="card-header">
                                                 Date
                                             </div>
-                                            <img src="..." class="card-img-top" alt="...">
+                                            <img class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Temp: </h5>
                                                 <p class="card-text">Humidity: </p>
@@ -138,7 +124,7 @@
                                             <div class ="card-header">
                                                 Date
                                             </div>
-                                            <img src="..." class="card-img-top" alt="...">
+                                            <img class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Temp: </h5>
                                                 <p class="card-text">Humidity: </p>
@@ -170,6 +156,6 @@
 
     <script src="https://kit.fontawesome.com/d49b7a6f5d.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type ="text/javascript" src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
 </html>
